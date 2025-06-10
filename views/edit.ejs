@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Email</title>
+  <style>
+    body {
+      background-color: #0d1117;
+      color: #c9d1d9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #58a6ff;
+      margin-bottom: 25px;
+      font-size: 2em;
+    }
+
+    form {
+      background-color: #161b22;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    input {
+      padding: 10px 14px;
+      border: none;
+      border-radius: 8px;
+      background-color: #0d1117;
+      color: #c9d1d9;
+      font-size: 1em;
+      border: 1px solid #30363d;
+    }
+
+    input::placeholder {
+      color: #8b949e;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #58a6ff;
+      background-color: #161b22;
+    }
+
+    button {
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background-color: #3b82f6;
+      color: white;
+      font-weight: bold;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s;
+    }
+
+    button:hover {
+      background-color: #2563eb;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h2>Your username is @<%= user.username %></h2>
+  <form action="/edit/<%= user.id %>?_method=PATCH" method="post">
+    <input type="email" value="<%= user.email %>" name="femail" placeholder="Enter new email" required>
+    <input type="password" name="fpassword" placeholder="Enter your password" required>
+    <button type="submit">Edit</button>
+  </form>
+</body>
+</html>

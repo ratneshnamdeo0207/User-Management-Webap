@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New User</title>
+  <style>
+    body {
+      background-color: #0d1117;
+      color: #c9d1d9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #58a6ff;
+      margin-bottom: 25px;
+      font-size: 2em;
+    }
+
+    form {
+      background-color: #161b22;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    input {
+      padding: 10px 14px;
+      border: none;
+      border-radius: 8px;
+      background-color: #0d1117;
+      color: #c9d1d9;
+      font-size: 1em;
+      border: 1px solid #30363d;
+    }
+
+    input::placeholder {
+      color: #8b949e;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #58a6ff;
+      background-color: #161b22;
+    }
+
+    button {
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background-color: #238636;
+      color: white;
+      font-weight: bold;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s;
+    }
+
+    button:hover {
+      background-color: #2ea043;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h2>Please Enter the Following Details</h2>
+  <form action="/newuser" method="post">
+    <input type="text" name="username" placeholder="Enter your username" required>
+    <input type="email" name="email" placeholder="Enter your email" required>
+    <input type="password" name="password" placeholder="Enter your password" required>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
