@@ -18,14 +18,21 @@ This is a simple CRUD-based User Management application built using **Node.js**,
 ### 🏠 Home Page  
 Displays the total number of users fetched from the database.
 
-![Home Page](./public/images/home.png)
+![Home Page](./Home.png)
 
 ---
 
 ### 👥 User List  
 All users displayed in a tabular format using EJS templating.
 
-![User List](./public/images/users.png)
+![User List](./NewUser.png)
+
+---
+
+### ✏️ Edit User  
+Update a user's email after verifying their password.
+
+![Edit User](./EditUser.png)
 
 
 ## 💡 Technologies Used
